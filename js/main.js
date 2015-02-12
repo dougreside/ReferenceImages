@@ -1,5 +1,5 @@
 var app = {
-    changePicture = function(event){
+    changePicture: function(event){
      event.preventDefault();
     if (!navigator.camera) {
         app.showAlert("Camera API not supported", "Error");
@@ -42,7 +42,7 @@ var app = {
         self.showAlert('Store Initialized', 'Info');
     });
     $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    this.el.on('click', '.change-pic-btn', this.changePicture);
+    $('.change-pic-btn').on('click',this.changePicture);
     },
     showAlert: function (message, title) {
     if (navigator.notification) {
