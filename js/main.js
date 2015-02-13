@@ -13,7 +13,9 @@ var app = {
  
     navigator.camera.getPicture(
         function(imageData) {
-            $('.employee-image', this.el).attr('src', "data:image/jpeg;base64," + imageData);
+        	 app.showAlert('Happiness', 'So far');
+        	$("#results").html("<img class='cam_image'></img>
+            $('.cam_image').attr('src', "data:image/jpeg;base64," + imageData);
         },
         function() {
             app.showAlert('Error taking picture', 'Error');
