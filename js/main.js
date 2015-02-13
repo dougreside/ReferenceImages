@@ -10,11 +10,11 @@ var app = {
                         sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
                         encodingType: 0     // 0=JPG 1=PNG
                     };
- 
+  	 app.showAlert('Tentative celebration', 'So far');
     navigator.camera.getPicture(
         function(imageData) {
         	 app.showAlert('Happiness', 'So far');
-        	$("#results").html("<img class='cam_image'></img>
+        	$("#results").html("<img class='cam_image'></img>");
             $('.cam_image').attr('src', "data:image/jpeg;base64," + imageData);
         },
         function() {
